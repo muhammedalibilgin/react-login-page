@@ -1,22 +1,40 @@
-import "./App.css";
-import SignIn from "./components/SignIn";
 import Login from "./components/login";
+import UserInterface from "./components/userInterface/userInterface";
+import "./App.css";
 
-function App() {
+import { useState } from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
+export default function App() {
       return (
-            <div className="App">
-                  <div className="sign">
-                        <div>
-                              {/* <h1>mali</h1> */}
-
-                              <SignIn />
-                        </div>
+            <Router>
+                  <div className="App">
+                        <Switch>
+                              <Route exact path="/" children={<Home />} />
+                              <Route path="/userInterface" component={UserInterface} />
+                        </Switch>
                   </div>
+            </Router>
+      );
+}
+
+function Home() {
+      const [loginForm, setLoginForm] = useState({});
+
+      if (loginForm.email === "a") {
+            // console.log("true a");
+            window.location.href = "/userInterface";
+      } else {
+            // console.log("false false");
+      }
+
+      return (
+            <div>
+                  <Link to="/userInterface">Visit the User Interface </Link>
+
                   <div className="login">
-                        <Login />
+                        <Login addLoginForm={setLoginForm} />
                   </div>
             </div>
       );
 }
-
-export default App;
