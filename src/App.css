@@ -1,6 +1,7 @@
 .App {
       text-align: center;
-      height: 100vh;
+      /* height: 100vh; */
+      min-height: 100vh;
       background: #a8c0ff; /* fallback for old browsers */
       background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff); /* Chrome 10-25, Safari 5.1-6 */
       background: linear-gradient(to right, #3f2b96, #a8c0ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -47,4 +48,67 @@
       width: 100%;
       background-color: blueviolet;
       margin-top: 50px;
+}
+
+.navbar {
+      /* background-color: burlywood; */
+      background-color: transparent;
+      /* background-color: gray; */
+      margin-top: 0px;
+}
+
+.navbar-floating {
+      /* position: absolute; */
+      /* position: relative; */
+      width: 100%;
+      left: 0;
+
+      /* z-index: 99; */
+}
+
+.ml-auto {
+      margin-left: auto !important;
+}
+
+.MuiTypography-root {
+      width: 100%;
+}
+
+.css-11o2879-MuiDrawer-docked .MuiDrawer-paper {
+      background-color: transparent;
+}
+
+.css-1hsz34s-MuiDrawer-docked .MuiDrawer-paper {
+      background-color: transparent;
+}
+
+.css-19z1ozs-MuiPaper-root-MuiAppBar-root {
+      background-color: transparent !important;
+      /* background-color: red !important; */
+
+      /* background-color: transparent !important; */
+      box-shadow: none !important;
+}
+
+.css-1191obr-MuiPaper-root-MuiAppBar-root {
+      background-color: transparent !important;
+      box-shadow: none !important;
+}
+
+.css-i4bv87-MuiSvgIcon-root {
+      font-size: 2.5rem !important;
+      color: white;
+}
+
+.css-11o2879-MuiDrawer-docked > .MuiPaper-root > .css-1u2mxbp > .MuiButtonBase-root > .css-i4bv87-MuiSvgIcon-root {
+      display: none;
+}
+
+.css-i4bv87-MuiSvgIcon-root {
+      /* color: black; */
+      color: white;
+}
+
+.css-1azl6jz-MuiTableCell-root {
+      font-weight: bold !important;
 }

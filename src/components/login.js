@@ -2,9 +2,8 @@ import { useState } from "react";
 
 import Button from "@mui/material/Button";
 import { TextField, Typography } from "@mui/material";
-
-import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Avatar from "@mui/material/Avatar";
+import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 
 function Login({ addLoginForm }) {
       const [form, setForm] = useState({ email: "", password: "" });

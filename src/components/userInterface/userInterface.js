@@ -1,14 +1,14 @@
 import React from "react";
 
-import users from "../user.json";
+import Navbar from "./navbar";
+// import Sidebar from "./sidebar";
+import MiniDrawer from "./MiniDrawer";
+// import { color } from "@mui/system";
 
 function userInterface() {
       return (
             <div>
-                  <h1>hello users:</h1>
-                  {users.map((x) => (
-                        <h3 key={x.id}>{x.email}</h3>
-                  ))}
+                  <MiniDrawer Navbar={Navbar} />
             </div>
       );
 }
