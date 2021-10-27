@@ -18,7 +18,6 @@ import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import Navbar from "./navbar";
-// import { Block } from "@material-ui/icons";
 
 import DataTable from "./dataTable";
 
@@ -128,7 +127,7 @@ export default function MiniDrawer(navbar) {
                               </IconButton>
                         </DrawerHeader>
                         <Divider />
-                        <List sx={{ color: "white" }}>
+                        <List sx={{ color: "#B2B4BF" }}>
                               {["Gelen Kutusu", "Başlangıç", "Mail Gönder", "Hediyeler", "Tüm Mesajlar", "Kullanıcı", "Tüm Kullanıcılar"].map(
                                     (text, index) => (
                                           <ListItem button key={text}>
@@ -139,21 +138,8 @@ export default function MiniDrawer(navbar) {
                               )}
                         </List>
                   </Drawer>
-                  <Box component="main" sx={{ flexGrow: 1, p: 3, margin: 5, backgroundColor: "yellow" }}>
-                        {/* <DrawerHeader sx={{ backgroundColor: "yellow" }} /> */}
-                        <Typography paragraph>hello users:</Typography>
-
-                        <Typography paragraph>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                              aliqua. Rhoncus dolor purus non enim praesent elementum facilisis leo vel. Risus at ultrices mi tempus imperdiet. Semper
-                              risus in hendrerit gravida rutrum quisque non tellus. Convallis convallis tellus id interdum velit laoreet id donec
-                              ultrices. Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit adipiscing bibendum est ultricies
-                              integer quis. Cursus euismod quis viverra nibh cras. Metus vulputate eu scelerisque felis imperdiet proin fermentum leo.
-                              Mauris commodo quis imperdiet massa tincidunt. Cras tincidunt lobortis feugiat vivamus at augue. At augue eget arcu
-                              dictum varius duis at consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem donec massa sapien faucibus et
-                              molestie ac.
-                        </Typography>
-                        <DataTable sx={{ backgroundColor: "red" }} />
+                  <Box component="main" sx={{ flexGrow: 1, p: 0, margin: 1, width: "100%", height: "100%" }}>
+                        <DataTable sx={{ backgroundColor: "green" }} />
                   </Box>
             </Box>
       );

@@ -1,20 +1,38 @@
 import { useState } from "react";
+import * as React from "react";
+
+import users from "./user.json";
 
 import Button from "@mui/material/Button";
+
 import { TextField, Typography } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 
-function Login({ addLoginForm }) {
+let currentAccount;
+
+function Login() {
       const [form, setForm] = useState({ email: "", password: "" });
 
+      const inputLoginUsername = document.querySelector("#LoginEmail");
+      const inputLoginPin = document.querySelector("#loginPassword");
+
       const handleSubmit = (e) => {
-            console.log("form=>", form);
-            addLoginForm(form);
+            e.preventDefault();
+
+            currentAccount = users.find((acc) => acc.email === inputLoginUsername.value);
+
+            if (currentAccount?.password === inputLoginPin.value) {
+                  window.location.href = "/userInterface";
+            } else {
+                  alert("E-mail ya da Şifreyi Hatalı Girdiniz!");
+            }
       };
 
       return (
             <form className="loginCont">
+                  <img src="https://helpimal.com/assets/favicon.png" alt="" width="80" />
+
                   <Avatar sx={{ m: 1, bgcolor: "blueviolet" }}>
                         <LockOutlinedIcon />
                   </Avatar>
@@ -42,7 +60,7 @@ function Login({ addLoginForm }) {
                         label="Password*"
                         variant="outlined"
                   />
-                  <Button onClick={(e) => handleSubmit()} id="loginButton" variant="contained">
+                  <Button onClick={(e) => handleSubmit(e)} id="loginButton" variant="contained">
                         LOGIN
                   </Button>
 

@@ -1,4 +1,7 @@
 import * as React from "react";
+
+import { useState } from "react";
+
 import PropTypes from "prop-types";
 import { useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
@@ -16,6 +19,7 @@ import FirstPageIcon from "@mui/icons-material/FirstPage";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import LastPageIcon from "@mui/icons-material/LastPage";
+import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 
 import users from "../user.json";
 
@@ -64,16 +68,11 @@ TablePaginationActions.propTypes = {
       rowsPerPage: PropTypes.number.isRequired,
 };
 
-// function createData(name, calories, fat) {
-//       return { name, calories, fat };
-// }
-
 export default function CustomPaginationActionsTable() {
       const [page, setPage] = React.useState(0);
       const [rowsPerPage, setRowsPerPage] = React.useState(5);
+      let [usersTable, setUsersTable] = useState(users);
 
-      // Avoid a layout jump when reaching the last page with empty rows.
-      // const emptyRows = page > 0 ? Math.max(0, (1 + page) * rowsPerPage - rows.length) : 0;
       const emptyRows = page > 0 ? Math.max(0, (1 + page) * rowsPerPage - users.length) : 0;
 
       const handleChangePage = (event, newPage) => {
@@ -85,19 +84,27 @@ export default function CustomPaginationActionsTable() {
             setPage(0);
       };
 
+      const deleteButton = (x) => {
+            const newUsersList = usersTable.filter((cur) => cur.id !== x.id);
+
+            usersTable = newUsersList;
+            setUsersTable(newUsersList);
+      };
+
       return (
-            <TableContainer component={Paper}>
-                  <Table sx={{ minWidth: 500 }} aria-label="custom pagination table">
+            <TableContainer sx={{ backgroundColor: "#a8c0ff" }} component={Paper}>
+                  <Table aria-label="custom pagination table">
                         <TableHead>
                               <TableRow>
                                     <TableCell sx={{ fontWeight: "bold" }}>İsim Soyisim</TableCell>
                                     <TableCell align="right">Kullanıcı Adı</TableCell>
                                     <TableCell align="right">ID</TableCell>
                                     <TableCell align="right">E-Mail</TableCell>
+                                    <TableCell align="right">Delete</TableCell>
                               </TableRow>
                         </TableHead>
                         <TableBody>
-                              {(rowsPerPage > 0 ? users.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage) : users).map((x) => (
+                              {(rowsPerPage > 0 ? usersTable.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage) : usersTable).map((x) => (
                                     <TableRow key={x.id}>
                                           <TableCell component="th" scope="row">
                                                 {x.name}
@@ -110,6 +117,13 @@ export default function CustomPaginationActionsTable() {
                                           </TableCell>
                                           <TableCell style={{ width: 160 }} align="right">
                                                 {x.email}
+                                          </TableCell>
+                                          <TableCell style={{ width: 160 }} align="right">
+                                                <DeleteForeverIcon
+                                                      onClick={(e) => deleteButton(x)}
+                                                      className="deletebuto"
+                                                      style={{ maxHeight: "30px", color: "white", opacity: 0.5 }}
+                                                />
                                           </TableCell>
                                     </TableRow>
                               ))}

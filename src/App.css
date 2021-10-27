@@ -26,6 +26,7 @@
       align-items: center;
 
       background-color: whitesmoke;
+      /* background-color: white; */
 
       border: red solid 3px;
 
@@ -34,7 +35,7 @@
 }
 
 .loginCont {
-      background-color: wheat;
+      /* background-color: wheat; */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -48,6 +49,10 @@
       width: 100%;
       background-color: blueviolet;
       margin-top: 50px;
+}
+
+.nav-link {
+      color: white;
 }
 
 .navbar {
@@ -84,9 +89,7 @@
 
 .css-19z1ozs-MuiPaper-root-MuiAppBar-root {
       background-color: transparent !important;
-      /* background-color: red !important; */
 
-      /* background-color: transparent !important; */
       box-shadow: none !important;
 }
 
@@ -105,10 +108,17 @@
 }
 
 .css-i4bv87-MuiSvgIcon-root {
-      /* color: black; */
-      color: white;
+      color: #b2b4bf;
+}
+.MuiBox-root > .MuiButtonBase-root > .css-i4bv87-MuiSvgIcon-root {
+      color: black !important;
 }
 
 .css-1azl6jz-MuiTableCell-root {
       font-weight: bold !important;
+}
+
+.deletebuto:hover {
+      cursor: pointer;
+      opacity: 1 !important;
 }

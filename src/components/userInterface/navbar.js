@@ -27,20 +27,27 @@ function Navbar() {
                                           </a>
                                     </li>
                                     <li className="nav-item">
-                                          <a className="nav-link" href="/#">
+                                          <a className="nav-link" href="/userInterface">
                                                 Hakkımızda
                                           </a>
                                     </li>
 
                                     <li className="nav-item">
-                                          <a className="nav-link" href="/#">
+                                          <a className="nav-link" href="/userInterface">
                                                 İletişim
                                           </a>
                                     </li>
                               </ul>
                               <div className="ml-auto my-2 my-lg-0">
                                     <button onClick={(e) => e} className="btn btn-dark rounded-pill">
-                                          Şimdi İndir
+                                          <a
+                                                className="nav-link"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                href="https://play.google.com/store/apps/details?id=com.helpimal&hl=tr"
+                                          >
+                                                Şimdi İndir
+                                          </a>
                                     </button>
                               </div>
                         </div>

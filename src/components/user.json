@@ -3,6 +3,7 @@
             "id": 1,
             "name": "Leanne Graham",
             "username": "Bret",
+            "password": "1234",
             "email": "Sincere@april.biz",
             "address": {
                   "street": "Kulas Light",
@@ -26,6 +27,7 @@
             "id": 2,
             "name": "Ervin Howell",
             "username": "Antonette",
+            "password": "5678",
             "email": "Shanna@melissa.tv",
             "address": {
                   "street": "Victor Plains",
@@ -49,6 +51,7 @@
             "id": 3,
             "name": "Clementine Bauch",
             "username": "Samantha",
+            "password": "1357",
             "email": "Nathan@yesenia.net",
             "address": {
                   "street": "Douglas Extension",
@@ -72,6 +75,7 @@
             "id": 4,
             "name": "Patricia Lebsack",
             "username": "Karianne",
+            "password": "2468",
             "email": "Julianne.OConner@kory.org",
             "address": {
                   "street": "Hoeger Mall",
@@ -95,6 +99,7 @@
             "id": 5,
             "name": "Chelsey Dietrich",
             "username": "Kamren",
+            "password": "1122",
             "email": "Lucio_Hettinger@annie.ca",
             "address": {
                   "street": "Skiles Walks",
@@ -118,6 +123,7 @@
             "id": 6,
             "name": "Mrs. Dennis Schulist",
             "username": "Leopoldo_Corkery",
+            "password": "3344",
             "email": "Karley_Dach@jasper.info",
             "address": {
                   "street": "Norberto Crossing",
@@ -141,6 +147,7 @@
             "id": 7,
             "name": "Kurtis Weissnat",
             "username": "Elwyn.Skiles",
+            "password": "5566",
             "email": "Telly.Hoeger@billy.biz",
             "address": {
                   "street": "Rex Trail",
@@ -164,6 +171,7 @@
             "id": 8,
             "name": "Nicholas Runolfsdottir V",
             "username": "Maxime_Nienow",
+            "password": "7788",
             "email": "Sherwood@rosamond.me",
             "address": {
                   "street": "Ellsworth Summit",
@@ -187,6 +195,7 @@
             "id": 9,
             "name": "Glenna Reichert",
             "username": "Delphine",
+            "password": "9900",
             "email": "Chaim_McDermott@dana.io",
             "address": {
                   "street": "Dayna Park",
@@ -210,6 +219,7 @@
             "id": 10,
             "name": "Clementina DuBuque",
             "username": "Moriah.Stanton",
+            "password": "1212",
             "email": "Rey.Padberg@karina.biz",
             "address": {
                   "street": "Kattie Turnpike",
@@ -231,8 +241,9 @@
       },
       {
             "id": 11,
-            "name": "Leanne Graham",
+            "name": "Leanneski Graham",
             "username": "Bret",
+            "password": "3434",
             "email": "Sincere@april.biz",
             "address": {
                   "street": "Kulas Light",
@@ -254,8 +265,9 @@
       },
       {
             "id": 12,
-            "name": "Ervin Howell",
+            "name": "Ervinski Howell",
             "username": "Antonette",
+            "password": "5656",
             "email": "Shanna@melissa.tv",
             "address": {
                   "street": "Victor Plains",
@@ -277,8 +289,9 @@
       },
       {
             "id": 13,
-            "name": "Clementine Bauch",
+            "name": "Clementineski Bauch",
             "username": "Samantha",
+            "password": "7878",
             "email": "Nathan@yesenia.net",
             "address": {
                   "street": "Douglas Extension",
@@ -300,8 +313,9 @@
       },
       {
             "id": 14,
-            "name": "Patricia Lebsack",
+            "name": "Patriciaski Lebsack",
             "username": "Karianne",
+            "password": "8989",
             "email": "Julianne.OConner@kory.org",
             "address": {
                   "street": "Hoeger Mall",
@@ -323,8 +337,9 @@
       },
       {
             "id": 15,
-            "name": "Chelsey Dietrich",
+            "name": "Chelseyski Dietrich",
             "username": "Kamren",
+            "password": "9090",
             "email": "Lucio_Hettinger@annie.ca",
             "address": {
                   "street": "Skiles Walks",
