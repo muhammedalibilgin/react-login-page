@@ -4,9 +4,9 @@ Create React App ile oluşturulmuş ve [https://mui.com/](https://mui.com/) ile 
 Örnek siteye e-mail ve password ile giriş yapılabilmektedir. Ve bizi kullanıcıların olduğu bir liste olan arayüz karşılamaktadır. Buradaki listeden istediğimiz kullanıcıyı yanda bulunan sil butonu ile silebilmekteyiz, hemen akabinde liste güncellenecektir.
 
 Örnek siteye giriş yapabilmek için gerekli bulununan e-mail ve password'lere **user.json** dosyasından ulaşabilirsiniz. Örnek kullanıcı girişi için;
-**e-mail**: Sincere@april.biz - **password**: 1234
-**e-mail**: Nathan@yesenia.net - **password**: 1357
-**e-mail**: Telly.Hoeger@billy.biz - **password**: 5566
+* **e-mail**: Sincere@april.biz - **password**: 1234
+* **e-mail**: Nathan@yesenia.net - **password**: 1357
+* **e-mail**: Telly.Hoeger@billy.biz - **password**: 5566
 
 Listedeki kullanıclar [https://jsonplaceholder.typicode.com/](https://jsonplaceholder.typicode.com/) sitesinden alınmıştır ve static olarak bulunmaktadır.
 
