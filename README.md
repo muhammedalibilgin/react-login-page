@@ -1,6 +1,8 @@
 # React-Login-Page
 Create React App ile oluşturulmuş ve [https://mui.com/](https://mui.com/) ile [https://reactrouter.com/web/guides/quick-start](https://reactrouter.com/web/guides/quick-start) teknolojileri kullanılmıştır.
 
+Örnek siteye [https://react-login-page-mab.netlify.app/](https://react-login-page-mab.netlify.app/) adresi üzerinden ulaşılabilmektedir.
+
 Örnek siteye e-mail ve password ile giriş yapılabilmektedir. Ve bizi kullanıcıların olduğu bir liste olan arayüz karşılamaktadır. Buradaki listeden istediğimiz kullanıcıyı yanda bulunan sil butonu ile silebilmekteyiz, hemen akabinde liste güncellenecektir.
 
 Örnek siteye giriş yapabilmek için gerekli bulununan e-mail ve password'lere **user.json** dosyasından ulaşabilirsiniz. Örnek kullanıcı girişi için;
