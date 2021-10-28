@@ -79,10 +79,12 @@
       width: 100%;
 }
 
+/* before left menu */
 .css-11o2879-MuiDrawer-docked .MuiDrawer-paper {
       background-color: transparent;
 }
 
+/*after left menu*/
 .css-1hsz34s-MuiDrawer-docked .MuiDrawer-paper {
       background-color: transparent;
 }
@@ -91,6 +93,10 @@
       background-color: transparent !important;
 
       box-shadow: none !important;
+}
+
+.css-191lty2 {
+      background-color: transparent;
 }
 
 .css-1191obr-MuiPaper-root-MuiAppBar-root {
