@@ -1,6 +1,8 @@
 import { useState } from "react";
 import * as React from "react";
 
+import { useHistory } from "react-router-dom";
+
 import users from "./user.json";
 
 import Button from "@mui/material/Button";
@@ -11,11 +13,13 @@ import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 
 let currentAccount;
 
-function Login() {
+function Login({ authorized, setAuthorized }) {
       const [form, setForm] = useState({ email: "", password: "" });
 
       const inputLoginUsername = document.querySelector("#LoginEmail");
       const inputLoginPin = document.querySelector("#loginPassword");
+
+      let history = useHistory();
 
       const handleSubmit = (e) => {
             e.preventDefault();
@@ -23,7 +27,10 @@ function Login() {
             currentAccount = users.find((acc) => acc.email === inputLoginUsername.value);
 
             if (currentAccount?.password === inputLoginPin.value) {
-                  window.location.href = "/userInterface";
+                  e.preventDefault();
+
+                  history.push("/userInterface");
+                  setAuthorized(true);
             } else {
                   alert("E-mail ya da Şifreyi Hatalı Girdiniz!");
             }
