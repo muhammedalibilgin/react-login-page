@@ -1,9 +1,13 @@
-import React from "react";
+import { Redirect } from "react-router-dom";
 
 import Navbar from "./navbar";
 import MiniDrawer from "./MiniDrawer";
 
-function userInterface() {
+function UserInterface({ authorized }) {
+      if (!authorized) {
+            return <Redirect to="/#" />;
+      }
+
       return (
             <div>
                   <MiniDrawer Navbar={Navbar} />
@@ -11,4 +15,4 @@ function userInterface() {
       );
 }
 
-export default userInterface;
+export default UserInterface;

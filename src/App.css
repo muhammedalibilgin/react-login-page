@@ -128,3 +128,10 @@
       cursor: pointer;
       opacity: 1 !important;
 }
+
+.error-a {
+      font-weight: bold;
+      font-size: x-large;
+      /* text-decoration: none; */
+      color: white;
+}
