@@ -80,24 +80,25 @@
 }
 
 /* before left menu */
-/* .css-11o2879-MuiDrawer-docked .MuiDrawer-paper {
+.css-11o2879-MuiDrawer-docked .MuiDrawer-paper {
       background-color: transparent;
-} */
+}
 
 /*after left menu*/
-/* .css-1hsz34s-MuiDrawer-docked .MuiDrawer-paper {
+.css-1hsz34s-MuiDrawer-docked .MuiDrawer-paper {
       background-color: transparent;
-} */
+}
 
 .css-1l8j5k8 {
       background-color: black;
 }
 
-.css-19z1ozs-MuiPaper-root-MuiAppBar-root {
+/* navbar not necessary*/
+/* .css-19z1ozs-MuiPaper-root-MuiAppBar-root {
       background-color: transparent !important;
 
       box-shadow: none !important;
-}
+} */
 
 .css-1191obr-MuiPaper-root-MuiAppBar-root {
       background-color: transparent !important;
