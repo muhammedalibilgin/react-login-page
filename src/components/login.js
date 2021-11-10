@@ -1,5 +1,6 @@
 import { useState } from "react";
 import * as React from "react";
+import { userSchema } from "./validations/uservalidations";
 
 import { useHistory } from "react-router-dom";
 
@@ -15,11 +16,33 @@ let currentAccount;
 
 function Login({ authorized, setAuthorized }) {
       const [form, setForm] = useState({ email: "", password: "" });
+      const [messa, setMessa] = useState("");
+      const [isvalid, setIsValid] = useState(false);
 
       const inputLoginUsername = document.querySelector("#LoginEmail");
       const inputLoginPin = document.querySelector("#loginPassword");
 
       let history = useHistory();
+
+      const validationUser = async (e) => {
+            e.preventDefault();
+
+            const isvalid = await setIsValid(userSchema.isValid(form));
+            console.log(isvalid);
+
+            userSchema.validate(form).catch((err) => {
+                  console.log(err.errors);
+            });
+
+            userSchema.validate(form).catch((err) => {
+                  console.log(err.errors);
+                  return setMessa(err.errors);
+            });
+      };
+
+      // const isvalid = userSchema.isValid(form);
+      // console.log(isvalid);
+      // console.log(form);
 
       const handleSubmit = (e) => {
             e.preventDefault();
@@ -32,12 +55,18 @@ function Login({ authorized, setAuthorized }) {
                   history.push("/userInterface");
                   setAuthorized(true);
             } else {
-                  alert("E-mail ya da Şifreyi Hatalı Girdiniz!");
+                  // alert("E-mail ya da Şifreyi Hatalı Girdiniz!");
             }
       };
 
       return (
-            <form className="loginCont">
+            <form
+                  onSubmit={function (e) {
+                        handleSubmit(e);
+                        validationUser(e);
+                  }}
+                  className="loginCont"
+            >
                   <img src="https://helpimal.com/assets/favicon.png" alt="" width="80" />
 
                   <Avatar sx={{ m: 1, bgcolor: "blueviolet" }}>
@@ -67,7 +96,8 @@ function Login({ authorized, setAuthorized }) {
                         label="Password*"
                         variant="outlined"
                   />
-                  <Button onClick={(e) => handleSubmit(e)} id="loginButton" variant="contained">
+                  {<div className="error">{messa}</div>}
+                  <Button type="submit" id="loginButton" variant="contained">
                         LOGIN
                   </Button>
 
